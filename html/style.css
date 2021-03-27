@@ -3,10 +3,44 @@
 	--background-color: #646464;
 	--accent-color: #32c671;
 	--font-color: #ffffff;
+	--font-tinted-color: #bebebe;
+	/* --font-tinted-color: #ff0000; */
 }
 
 body
 {
 	background-color: var(--background-color);
 	color: var(--font-color);
+    font-family: 'Lato', sans-serif;
+	margin: 0px;
+}
+
+a:hover
+{
+	color: var(--font-tinted-color)!important;
+	text-decoration: underline;
+}
+
+#logo
+{
+	margin-left: 2rem;
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+
+#logo:hover
+{
+	cursor: pointer;
+}
+
+.nav-item
+{
+	color: inherit;
+	font-size: 1.25rem;
+	margin-left: 2rem;
+}
+
+#add-btn
+{
+
 }
