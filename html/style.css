@@ -1,23 +1,23 @@
 :root
 {
-	--background-color: #646464;
-	--accent-color: #32c671;
-	--font-color: #ffffff;
-	--font-tinted-color: #bebebe;
-	/* --font-tinted-color: #ff0000; */
+	--bg-primary: #646464;
+	--bg-secondary: #3e3e3e;
+	--accent: #32c671;
+	--font: #ffffff;
+	--font-tinted: #bebebe;
+	background-color: var(--bg-primary);
+	color: var(--font);
+	font-family: 'Lato', sans-serif;
 }
 
 body
 {
-	background-color: var(--background-color);
-	color: var(--font-color);
-    font-family: 'Lato', sans-serif;
 	margin: 0px;
 }
 
 a:hover
 {
-	color: var(--font-tinted-color)!important;
+	color: var(--font-tinted)!important;
 	text-decoration: underline;
 }
 
@@ -38,9 +38,4 @@ a:hover
 	color: inherit;
 	font-size: 1.25rem;
 	margin-left: 2rem;
-}
-
-#add-btn
-{
-
 }
