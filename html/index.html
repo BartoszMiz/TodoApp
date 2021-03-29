@@ -18,24 +18,69 @@
 	<script src="https://kit.fontawesome.com/b51f17e0bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<nav class="navbar">
-		<div class="navbar-logo">
-			<a>
-				<i class="fas fa-clipboard-list"></i>
-				TODO App
-			</a>
+	<header>
+		<nav class="navbar">
+			<div class="navbar-logo">
+				<a>
+					<i class="fas fa-clipboard-list"></i>
+					TODO App
+				</a>
+			</div>
+			<div class="navbar-item">
+				<i class="fas fa-home"></i>
+				<a>Home</a>
+			</div>
+			<div class="navbar-item">
+				<i class="fas fa-info"></i>
+				<a>About</a>
+			</div>
+			<button class="btn add-btn" type="button">
+				<i class="fas fa-plus"></i>
+			</button>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			<!-- <h1 class="todo-header">Your TODO items</h1> -->
+			<table class="todo-table">
+				<tr>
+					<th>Instruction</th>
+					<th>Deadline</th>
+					<th>Added on</th>
+					<th>Complete</th>
+				</tr>
+				<tr>
+					<td>Take out the trash</td>
+					<td>19.04.2021 @ 20:00</td>
+					<td>25.03.2021 @ 16:55</td>
+					<td>
+						<a class="todo-complete">
+							<i class="fas fa-check"></i>
+						</a>
+					</td>
+				</tr>
+				<tr class="todo-past-deadline">
+					<td>Write a report</td>
+					<td>24.03.2021 @ 16:00</td>
+					<td>15.03.2021 @ 16:55</td>
+					<td>
+						<a class="todo-complete">
+							<i class="fas fa-check"></i>
+						</a>
+					</td>
+				</tr>
+				<tr class="todo-past-deadline">
+					<td>Become the emperor of the galaxy, construct a giant weapon of mass destruction and blow up Alderran</td>
+					<td>24.03.2021 @ 16:00</td>
+					<td>15.03.2021 @ 16:55</td>
+					<td>
+						<a class="todo-complete">
+							<i class="fas fa-check"></i>
+						</a>
+					</td>
+				</tr>
+			</table>
 		</div>
-		<div class="navbar-item">
-			<i class="fas fa-home"></i>
-			<a>Home</a>
-		</div>
-		<div class="navbar-item">
-			<i class="fas fa-info"></i>
-			<a>About</a>
-		</div>
-		<button class="btn add-btn" type="button">
-			<i class="fas fa-plus"></i>
-		</button>
-	</nav>
+	</main>
 </body>
 </html>
