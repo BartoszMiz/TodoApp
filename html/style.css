@@ -42,11 +42,21 @@ a
 	color: var(--accent);
 }
 
+.navbar-logo > a > i
+{
+	padding: 0.25rem;
+}
+
 .navbar-item
 {
 	font-size: 1.25rem;
 	margin-left: 1.25rem;
 	padding: 0.5rem;
+}
+
+.navbar-item > i
+{
+	padding: 0.25rem;
 }
 
 .navbar-item:hover
