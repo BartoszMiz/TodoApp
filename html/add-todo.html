@@ -41,7 +41,26 @@
 	</header>
 	<main>
 		<div class="container">
-
+			<form class="todo-form">
+				<div class="todo-form-row">
+					<label class="todo-form-label" for="instruction">Instruction:</label>
+					<input class="todo-form-field" id="instruction" type="text" placeholder="What do you need to do?">
+				</div>
+				<div class="todo-form-row">
+					<label class="todo-form-label" for="deadline-date">Deadline:</label>
+					<input class="todo-form-field todo-form-date" id="deadline-date" type="date" value="2021-04-01">
+					<label class="todo-form-label todo-form-at" for="deadline-time">@</label>
+					<input class="todo-form-field todo-form-time" id="deadline-time" type="time" value="12:00">
+					<button class="btn cancel-btn" type="submit">
+						<i class="fas fa-plus"></i>
+						Cancel
+					</button>
+					<button class="btn submit-btn" type="submit">
+						<i class="fas fa-plus"></i>
+						Add new item
+					</button>
+				</div>
+			</form>
 		</div>
 	</main>
 </body>

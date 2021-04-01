@@ -196,3 +196,71 @@ a
 {
 	color: var(--accent);
 }
+
+.todo-form
+{
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	text-align: center;
+}
+
+.todo-form-row
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0.25rem;
+}
+
+.todo-form-label
+{
+	font-size: 1.5rem;
+	padding-right: 0.5rem;
+}
+
+.todo-form-field
+{
+	width: 100%;
+	font-size: 1.25rem;
+	line-height: 2;
+	padding: 0.25rem;
+	border-radius: 0.25rem;
+	max-width: 100%;
+}
+
+.todo-form-date
+{
+	width: 13ch;
+	margin-left: 1.75ch;
+}
+
+.todo-form-at
+{
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+}
+
+.todo-form-time
+{
+	width: 8ch;
+}
+
+.cancel-btn
+{
+	align-items: center;
+	font-size: 1.25rem;
+	margin-left: auto;
+	margin-right: 0.5rem;
+	padding-left: 0.8rem;
+	padding-right: 0.8rem;
+	background-color: var(--danger);
+}
+
+.submit-btn
+{
+	align-items: center;
+	font-size: 1.25rem;
+	padding-left: 0.8rem;
+	padding-right: 0.8rem;
+	background-color: var(--accent);
+}
