@@ -41,54 +41,26 @@
 	</header>
 	<main>
 		<div class="container">
-			<table class="todo-table">
-				<tr>
-					<th>Instruction</th>
-					<th>Deadline</th>
-					<th>Added on</th>
-					<th>Complete</th>
-				</tr>
-				<tr>
-					<td>Take out the trash</td>
-					<td>19.04.2021 @ 20:00</td>
-					<td>25.03.2021 @ 16:55</td>
-					<td>
-						<a class="todo-complete-icon">
-							<i class="fas fa-check"></i>
-						</a>
-					</td>
-				</tr>
-				<tr class="todo-completed">
-					<td>Do the homework</td>
-					<td>19.04.2021 @ 20:00</td>
-					<td>25.03.2021 @ 16:55</td>
-					<td>
-						<a class="todo-complete-icon">
-							<i class="fas fa-check"></i>
-						</a>
-					</td>
-				</tr>
-				<tr class="todo-near-deadline">
-					<td>Become the emperor of the galaxy, construct a giant weapon of mass destruction and blow up Alderran</td>
-					<td>24.03.2021 @ 16:00</td>
-					<td>15.03.2021 @ 16:55</td>
-					<td>
-						<a class="todo-complete-icon">
-							<i class="fas fa-check"></i>
-						</a>
-					</td>
-				</tr>
-				<tr class="todo-past-deadline">
-					<td>Write a report</td>
-					<td>24.03.2021 @ 16:00</td>
-					<td>15.03.2021 @ 16:55</td>
-					<td>
-						<a class="todo-complete-icon">
-							<i class="fas fa-check"></i>
-						</a>
-					</td>
-				</tr>
-			</table>
+			<form class="todo-form">
+				<div class="todo-form-row">
+					<label class="todo-form-label" for="instruction">Instruction:</label>
+					<input class="todo-form-field" id="instruction" type="text" placeholder="What do you need to do?">
+				</div>
+				<div class="todo-form-row">
+					<label class="todo-form-label" for="deadline-date">Deadline:</label>
+					<input class="todo-form-field todo-form-date" id="deadline-date" type="date" value="2021-04-01">
+					<label class="todo-form-label todo-form-at" for="deadline-time">@</label>
+					<input class="todo-form-field todo-form-time" id="deadline-time" type="time" value="12:00">
+					<button class="btn cancel-btn" type="submit">
+						<i class="fas fa-plus"></i>
+						Cancel
+					</button>
+					<button class="btn submit-btn" type="submit">
+						<i class="fas fa-plus"></i>
+						Add new item
+					</button>
+				</div>
+			</form>
 		</div>
 	</main>
 </body>
