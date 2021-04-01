@@ -44,13 +44,16 @@
 			<form class="todo-form">
 				<div class="todo-form-row">
 					<label class="todo-form-label" for="instruction">Instruction:</label>
-					<input class="todo-form-field" id="instruction" type="text" placeholder="What do you need to do?">
+					<input class="todo-form-field todo-form-instruction" id="instruction" type="text" placeholder="What do you need to do?">
 				</div>
 				<div class="todo-form-row">
 					<label class="todo-form-label" for="deadline-date">Deadline:</label>
 					<input class="todo-form-field todo-form-date" id="deadline-date" type="date" value="2021-04-01">
 					<label class="todo-form-label todo-form-at" for="deadline-time">@</label>
 					<input class="todo-form-field todo-form-time" id="deadline-time" type="time" value="12:00">
+
+					<div class="btn-divider" style="display: none; flex-basis: 100%;"></div>
+
 					<button class="btn cancel-btn" type="submit">
 						<i class="fas fa-plus"></i>
 						Cancel
@@ -63,5 +66,8 @@
 			</form>
 		</div>
 	</main>
+	<footer>
+		&copy; TODO App - 2021
+	</footer>
 </body>
 </html>
