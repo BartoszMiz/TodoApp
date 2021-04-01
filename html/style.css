@@ -269,3 +269,17 @@ a
 	padding-right: 0.8rem;
 	background-color: var(--accent);
 }
+
+footer
+{
+	position: fixed;
+	bottom: 0px;
+	font-size: 0.75rem;
+	font-weight: lighter;
+	color: var(--accent);
+	text-align: center;
+	background-color: var(--bg-secondary);
+	width: 100%;
+	padding: 0.25rem;
+	font-size: 0.9rem;
+}
