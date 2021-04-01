@@ -197,6 +197,11 @@ a
 	color: var(--accent);
 }
 
+.todo-completed td .todo-complete-icon:hover
+{
+	color: var(--accent)!important;
+}
+
 .todo-form
 {
 	padding-left: 2.5rem;
