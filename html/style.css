@@ -213,6 +213,7 @@ a
 {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
 	padding: 0.25rem;
 }
@@ -225,12 +226,16 @@ a
 
 .todo-form-field
 {
-	width: 100%;
 	font-size: 1.25rem;
 	line-height: 2;
 	padding: 0.25rem;
 	border-radius: 0.25rem;
 	max-width: 100%;
+}
+
+.todo-form-instruction
+{
+	flex: 1;
 }
 
 .todo-form-date
@@ -282,4 +287,12 @@ footer
 	width: 100%;
 	padding: 0.25rem;
 	font-size: 0.9rem;
+}
+
+@media screen and (max-wdith: 810px)
+{
+	.btn-divider
+	{
+		display: block;
+	}
 }
