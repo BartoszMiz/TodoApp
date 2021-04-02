@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/site.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Site info -->
+	<title>TODO app - @ViewData["Title"]</title>
+	<meta name="description" content="Never forget, what you need to do with this revolutionary web app!">
+	<meta name="keywords" content="TODO, app, webapp">
+	<link rel="shortcut icon" href="img/logo.svg" type="image/svg">
+
+	<script src="https://kit.fontawesome.com/b51f17e0bc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<div class="navbar-logo">
+				<a>
+					<i class="fas fa-clipboard-list"></i>
+					TODO App
+				</a>
+			</div>
+			<div class="navbar-item">
+				<i class="fas fa-home"></i>
+				<a>Home</a>
+			</div>
+			<div class="navbar-item">
+				<i class="fas fa-info"></i>
+				<a>About</a>
+			</div>
+			<button class="btn add-btn" type="button">
+				<i class="fas fa-plus"></i>
+			</button>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			@RenderBody()
+		</div>
+	</main>
+
+	<footer>
+		&copy; TODO App - 2021
+	</footer>
+
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
