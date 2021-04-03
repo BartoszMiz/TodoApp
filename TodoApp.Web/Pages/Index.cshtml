@@ -4,7 +4,24 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<table class="todo-table">
+	<tr>
+		<th>Instruction</th>
+		<th>Deadline</th>
+		<th>Added on</th>
+		<th>Complete</th>
+	</tr>
+	@foreach (var todoItem in Model.TodoItems)
+	{
+		<tr>
+			<td>@todoItem.Instruction</td>
+			<td>@todoItem.Deadline.ToString("dd.MM.yyyy @ HH:mm")</td>
+			<td>@todoItem.AdditionDate.ToString("dd.MM.yyyy @ HH:mm")</td>
+			<td>
+				<a class="todo-complete-icon">
+					<i class="fas fa-check"></i>
+				</a>
+			</td>
+		</tr>
+	}
+</table>

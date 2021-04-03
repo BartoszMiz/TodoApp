@@ -2,25 +2,25 @@
 	{
 		"id": 1,
 		"instruction": "Take out the trash",
-		"deadline": "19-04-2021T20:00",
-		"addition-date": "25-03-2021T16:55"
+		"deadline": "2021-04-19T20:00:00",
+		"addition-date": "2021-03-25T16:55:00"
 	},
 	{
 		"id": 2,
 		"instruction": "Do the homework",
-		"deadline": "19-04-2021T20:00",
-		"addition-date": "25-03-2021T16:55"
+		"deadline": "2021-04-19T20:00:00",
+		"addition-date": "2021-03-25T16:55:00"
 	},
 	{
 		"id": 3,
 		"instruction": "Become the emperor of the galaxy, construct a giant weapon of mass destruction and blow up Alderran",
-		"deadline": "24-03-2021T16:00",
-		"addition-date": "15-03-2021T16:55"
+		"deadline": "2021-03-24T16:00:00",
+		"addition-date": "2021-03-25T16:55:00"
 	},
 	{
 		"id": 4,
 		"instruction": "Write a report",
-		"deadline": "24-03-2021T16:00",
-		"addition-date": "15-03-2021T16:55"
+		"deadline": "2021-03-24T16:00:00",
+		"addition-date": "2021-03-25T16:55:00"
 	}
 ]
