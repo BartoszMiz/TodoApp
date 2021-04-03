@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TodoApp.Web.Services;
 
 namespace TodoApp.Web
 {
@@ -24,6 +25,7 @@ namespace TodoApp.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+			services.AddSingleton<ITodoItemProvider, TodoItemJsonProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
