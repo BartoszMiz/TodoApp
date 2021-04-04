@@ -1,4 +1,5 @@
 ﻿@page
+@using TodoApp.Web.Models
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -13,13 +14,11 @@
 	</tr>
 	@foreach (var todoItem in Model.TodoItems)
 	{
-		var daysToDeadline = (todoItem.Deadline - DateTime.Now).Days;
-		var isNearDeadline = daysToDeadline <= 1;
-		var isPastDeadline = DateTime.Compare(todoItem.Deadline, DateTime.Now) < 0;
+		var deadlineState = Model.itemDeadlineStateCalculator.CalculateItemDeadlineState(todoItem.Deadline);
 		var todoItemClass = string.Empty;
-		if(isPastDeadline)
+		if(deadlineState == ItemDeadlineState.PAST_DEADLINE)
 			todoItemClass = "todo-past-deadline";
-		else if(isNearDeadline)
+		else if(deadlineState == ItemDeadlineState.NEAR_DEADLINE)
 			todoItemClass = "todo-near-deadline";
 
 		<tr class="@todoItemClass">

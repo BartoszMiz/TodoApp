@@ -25,6 +25,8 @@ namespace TodoApp.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+			services.AddSingleton<IDateTimeProvider, DefaultDateTimeProvider>();
+			services.AddSingleton<TodoItemDeadlineStateCalculator>();
 			services.AddSingleton<ITodoItemProvider, TodoItemJsonProvider>();
         }
 

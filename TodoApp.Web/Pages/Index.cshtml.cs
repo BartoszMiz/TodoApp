@@ -10,15 +10,20 @@ namespace TodoApp.Web.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 		private readonly ITodoItemProvider todoItemProvider;
+		public readonly TodoItemDeadlineStateCalculator itemDeadlineStateCalculator;
 		public IEnumerable<TodoItem> TodoItems { get; private set; }
 
-        public IndexModel(ILogger<IndexModel> logger, ITodoItemProvider todoItemProvider)
+		public IndexModel(
+			ILogger<IndexModel> logger,
+			ITodoItemProvider todoItemProvider,
+			TodoItemDeadlineStateCalculator itemDeadlineStateCalculator)
 		{
-            _logger = logger;
+			_logger = logger;
 			this.todoItemProvider = todoItemProvider;
+			this.itemDeadlineStateCalculator = itemDeadlineStateCalculator;
 		}
 
-        public void OnGet()
+		public void OnGet()
         {
 			TodoItems = todoItemProvider.GetTodoItems();
         }
