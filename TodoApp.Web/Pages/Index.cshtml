@@ -13,7 +13,16 @@
 	</tr>
 	@foreach (var todoItem in Model.TodoItems)
 	{
-		<tr>
+		var daysToDeadline = (todoItem.Deadline - DateTime.Now).Days;
+		var isNearDeadline = daysToDeadline <= 1;
+		var isPastDeadline = DateTime.Compare(todoItem.Deadline, DateTime.Now) < 0;
+		var todoItemClass = string.Empty;
+		if(isPastDeadline)
+			todoItemClass = "todo-past-deadline";
+		else if(isNearDeadline)
+			todoItemClass = "todo-near-deadline";
+
+		<tr class="@todoItemClass">
 			<td>@todoItem.Instruction</td>
 			<td>@todoItem.Deadline.ToString("dd.MM.yyyy @ HH:mm")</td>
 			<td>@todoItem.AdditionDate.ToString("dd.MM.yyyy @ HH:mm")</td>
