@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using TodoApp.Web.Models;
-using TodoApp.Web.Services;
+using TodoApp.Web.Core.Models;
+using TodoApp.Web.Core.Services;
 
 namespace TodoApp.Web.Pages
 {

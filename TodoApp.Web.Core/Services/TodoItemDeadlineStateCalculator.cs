@@ -1,7 +1,7 @@
 using System;
-using TodoApp.Web.Models;
+using TodoApp.Web.Core.Models;
 
-namespace TodoApp.Web.Services
+namespace TodoApp.Web.Core.Services
 {
 	public class TodoItemDeadlineStateCalculator
 	{

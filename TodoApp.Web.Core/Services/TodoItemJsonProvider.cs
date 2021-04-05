@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using Microsoft.AspNetCore.Hosting;
-using TodoApp.Web.Models;
+using TodoApp.Web.Core.Models;
 
-namespace TodoApp.Web.Services
+namespace TodoApp.Web.Core.Services
 {
 	public class TodoItemJsonProvider : ITodoItemProvider
 	{

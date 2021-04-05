@@ -1,6 +1,6 @@
 using System;
 
-namespace TodoApp.Web.Services
+namespace TodoApp.Web.Core.Services
 {
 	public class DefaultDateTimeProvider : IDateTimeProvider
 	{

@@ -1,7 +1,7 @@
 using System;
 using System.Text.Json.Serialization;
 
-namespace TodoApp.Web.Models
+namespace TodoApp.Web.Core.Models
 {
 	public class TodoItem
 	{
