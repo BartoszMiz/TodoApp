@@ -14,12 +14,20 @@
 	</tr>
 	@foreach (var todoItem in Model.TodoItems)
 	{
-		var deadlineState = Model.itemDeadlineStateCalculator.CalculateItemDeadlineState(todoItem.Deadline);
+		var deadlineState = Model.itemDeadlineStateCalculator.CalculateItemDeadlineState(todoItem);
 		var todoItemClass = string.Empty;
-		if(deadlineState == ItemDeadlineState.PAST_DEADLINE)
-			todoItemClass = "todo-past-deadline";
-		else if(deadlineState == ItemDeadlineState.NEAR_DEADLINE)
-			todoItemClass = "todo-near-deadline";
+		switch(deadlineState)
+		{
+			case ItemDeadlineState.COMPLETED:
+				todoItemClass = "todo-completed";
+				break;
+			case ItemDeadlineState.NEAR_DEADLINE:
+				todoItemClass = "todo-near-deadline";
+				break;
+			case ItemDeadlineState.PAST_DEADLINE:
+				todoItemClass = "todo-past-deadline";
+				break;
+		}
 
 		<tr class="@todoItemClass">
 			<td>@todoItem.Instruction</td>
