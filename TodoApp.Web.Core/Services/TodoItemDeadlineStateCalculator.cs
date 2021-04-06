@@ -17,12 +17,12 @@ namespace TodoApp.Web.Core.Services
 			if(todoItem.IsCompleted)
 				return ItemDeadlineState.COMPLETED;
 
-			var isPastDeadline = DateTime.Compare(todoItem.Deadline, DateTime.Now) < 0;
+			var isPastDeadline = DateTime.Compare(todoItem.Deadline, dateTimeProvider.Now) < 0;
 			if(isPastDeadline)
 				return ItemDeadlineState.PAST_DEADLINE;
 
 			var daysToDeadline = (todoItem.Deadline - dateTimeProvider.Now).Days;
-			var isNearDeadline = daysToDeadline <= 0;
+			var isNearDeadline = daysToDeadline <= 1;
 			if(isNearDeadline)
 				return ItemDeadlineState.NEAR_DEADLINE;
 
