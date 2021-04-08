@@ -27,10 +27,7 @@ namespace TodoApp.Web
         public void ConfigureServices(IServiceCollection services)
         {
 			services.AddDbContext<TodoItemDbContext>(options =>
-				options.UseSqlite(Configuration.GetConnectionString("Sqlite"), opt =>
-				{
-					opt.MigrationsAssembly("TodoApp.Web.Migrations");
-				}));
+				options.UseSqlite(Configuration.GetConnectionString("Sqlite")));
 
             services.AddRazorPages();
 			services.AddSingleton<IDateTimeProvider, DefaultDateTimeProvider>();

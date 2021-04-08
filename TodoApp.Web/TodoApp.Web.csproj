@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TodoApp.Web.Core\TodoApp.Web.Core.csproj" />
-    <ProjectReference Include="..\TodoApp.Web.Migrations\TodoApp.Web.Migrations.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,5 +19,9 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 
 </Project>
