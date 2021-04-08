@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TodoApp.Web.Contexts;
 using TodoApp.Web.Core.Services;
 
 namespace TodoApp.Web
@@ -24,6 +26,12 @@ namespace TodoApp.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+			services.AddDbContext<TodoItemDbContext>(options =>
+				options.UseSqlite(Configuration.GetConnectionString("Sqlite"), opt =>
+				{
+					opt.MigrationsAssembly("TodoApp.Web.Migrations");
+				}));
+
             services.AddRazorPages();
 			services.AddSingleton<IDateTimeProvider, DefaultDateTimeProvider>();
 			services.AddSingleton<TodoItemDeadlineStateCalculator>();

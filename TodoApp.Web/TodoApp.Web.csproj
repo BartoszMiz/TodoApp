@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TodoApp.Web.Core\TodoApp.Web.Core.csproj" />
+    <ProjectReference Include="..\TodoApp.Web.Migrations\TodoApp.Web.Migrations.csproj" />
   </ItemGroup>
 
   <ItemGroup>

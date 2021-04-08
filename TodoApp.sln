@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Web.Core", "TodoApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Web.Core.Tests", "TodoApp.Web.Core.Tests\TodoApp.Web.Core.Tests.csproj", "{1353762F-89D5-4E94-96DF-F49C55DAB537}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp.Web.Migrations", "TodoApp.Web.Migrations\TodoApp.Web.Migrations.csproj", "{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{1353762F-89D5-4E94-96DF-F49C55DAB537}.Release|x64.Build.0 = Release|Any CPU
 		{1353762F-89D5-4E94-96DF-F49C55DAB537}.Release|x86.ActiveCfg = Release|Any CPU
 		{1353762F-89D5-4E94-96DF-F49C55DAB537}.Release|x86.Build.0 = Release|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Debug|x64.Build.0 = Debug|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Debug|x86.Build.0 = Debug|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Release|x64.ActiveCfg = Release|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Release|x64.Build.0 = Release|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Release|x86.ActiveCfg = Release|Any CPU
+		{BEFA8D53-ABD8-43DE-ABA1-B6C63796DECA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
