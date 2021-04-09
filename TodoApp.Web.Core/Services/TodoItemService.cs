@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TodoApp.Web.Core.Models;
 using TodoApp.Web.Core.Contexts;
+using System.Linq;
 
 namespace TodoApp.Web.Core.Services
 {
@@ -9,14 +10,19 @@ namespace TodoApp.Web.Core.Services
 	{
 		private readonly TodoItemDbContext dbContext;
 
-		public async Task<TodoItem> GetTodoItemAsync(int id)
+		public TodoItemService(TodoItemDbContext dbContext)
 		{
-			throw new System.NotImplementedException();
+			this.dbContext = dbContext;
 		}
 
-		public async Task<IEnumerable<TodoItem>> GetTodoItemsAsync()
+		public Task<TodoItem> GetTodoItemAsync(int id)
 		{
-			throw new System.NotImplementedException();
+			return Task.FromResult(dbContext.TodoItems.FirstOrDefault(x => x.Id == id));
+		}
+
+		public Task<IEnumerable<TodoItem>> GetTodoItemsAsync()
+		{
+			return Task.FromResult((IEnumerable<TodoItem>)dbContext.TodoItems);
 		}
 	}
 }

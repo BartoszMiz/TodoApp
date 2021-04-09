@@ -3,7 +3,7 @@ using TodoApp.Web.Core.Models;
 
 namespace TodoApp.Web.Core.Contexts
 {
-	public class TodoItemDbContext : DbContext
+	public class TodoItemDbContext : DbContext, ITodoItemContext
 	{
 		public DbSet<TodoItem> TodoItems { get; set; }
 
