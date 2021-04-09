@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Web.Core.Models;
 
-namespace TodoApp.Web.Contexts
+namespace TodoApp.Web.Core.Contexts
 {
 	public class TodoItemDbContext : DbContext
 	{

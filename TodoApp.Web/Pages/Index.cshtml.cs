@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using TodoApp.Web.Core.Models;
 using TodoApp.Web.Core.Services;
+using System.Threading.Tasks;
 
 namespace TodoApp.Web.Pages
 {
@@ -23,9 +24,9 @@ namespace TodoApp.Web.Pages
 			this.itemDeadlineStateCalculator = itemDeadlineStateCalculator;
 		}
 
-		public void OnGet()
+		public async Task OnGetAsync()
         {
-			TodoItems = todoItemProvider.GetTodoItems();
+			TodoItems = await todoItemProvider.GetTodoItemsAsync();
         }
     }
 }

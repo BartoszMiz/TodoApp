@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using TodoApp.Web.Core.Models;
 
@@ -30,22 +31,22 @@ namespace TodoApp.Web.Core.Services
 			}
 		}
 
-		public TodoItem GetTodoItem(int id)
+		public Task<TodoItem> GetTodoItemAsync(int id)
 		{
 			if(storedItems == null)
 				FetchTodoItems();
 
 			if(id < storedItems.Length && id >= 0)
-				return storedItems[id];
+				return Task.FromResult(storedItems[id]);
 			else
 				return null;
 		}
 
-		public IEnumerable<TodoItem> GetTodoItems()
+		public Task<IEnumerable<TodoItem>> GetTodoItemsAsync()
 		{
 			if(storedItems == null)
 				FetchTodoItems();
-			return storedItems;
+			return Task.FromResult((IEnumerable<TodoItem>)storedItems);
 		}
 	}
 }

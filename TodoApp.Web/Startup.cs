@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TodoApp.Web.Contexts;
+using TodoApp.Web.Core.Contexts;
 using TodoApp.Web.Core.Services;
 
 namespace TodoApp.Web
