@@ -1,18 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TodoApp.Web.Core.Contexts;
 using TodoApp.Web.Core.Services;
 
 namespace TodoApp.Web
 {
-    public class Startup
+	public class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -24,10 +21,13 @@ namespace TodoApp.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+			services.AddDbContext<TodoItemDbContext>(options =>
+				options.UseSqlite(Configuration.GetConnectionString("Sqlite")));
+
             services.AddRazorPages();
 			services.AddSingleton<IDateTimeProvider, DefaultDateTimeProvider>();
 			services.AddSingleton<TodoItemDeadlineStateCalculator>();
-			services.AddSingleton<ITodoItemProvider, TodoItemJsonProvider>();
+			services.AddScoped<ITodoItemProvider, TodoItemService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
