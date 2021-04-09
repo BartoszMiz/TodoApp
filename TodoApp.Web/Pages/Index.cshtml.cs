@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using TodoApp.Web.Core.Models;
 using TodoApp.Web.Core.Services;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace TodoApp.Web.Pages
 {
@@ -12,7 +13,7 @@ namespace TodoApp.Web.Pages
         private readonly ILogger<IndexModel> _logger;
 		private readonly ITodoItemProvider todoItemProvider;
 		public readonly TodoItemDeadlineStateCalculator itemDeadlineStateCalculator;
-		public IEnumerable<TodoItem> TodoItems { get; private set; }
+		public TodoItem[] TodoItems { get; private set; }
 
 		public IndexModel(
 			ILogger<IndexModel> logger,
@@ -26,7 +27,7 @@ namespace TodoApp.Web.Pages
 
 		public async Task OnGetAsync()
         {
-			TodoItems = await todoItemProvider.GetTodoItemsAsync();
+			TodoItems = (await todoItemProvider.GetTodoItemsAsync()).ToArray();
         }
     }
 }
