@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TodoApp.Web.Contexts;
+using TodoApp.Web.Core.Contexts;
 
 namespace TodoApp.Web.Migrations
 {
