@@ -83,11 +83,15 @@ a
 	filter: brightness(85%);
 }
 
+.add-btn-form
+{
+	margin-left: auto;
+	margin-right: 0.75rem;
+}
+
 .add-btn
 {
 	font-size: 1.25rem;
-	margin-left: auto;
-	margin-right: 0.75rem;
 	padding-left: 0.8rem;
 	padding-right: 0.8rem;
 	background-color: var(--accent);
@@ -255,7 +259,7 @@ a
 	width: 9ch;
 }
 
-.cancel-btn
+/* .cancel-btn
 {
 	align-items: center;
 	font-size: 1.25rem;
@@ -264,10 +268,11 @@ a
 	padding-left: 0.8rem;
 	padding-right: 0.8rem;
 	background-color: var(--danger);
-}
+} */
 
 .submit-btn
 {
+	margin-left: auto;
 	align-items: center;
 	font-size: 1.25rem;
 	padding-left: 0.8rem;
