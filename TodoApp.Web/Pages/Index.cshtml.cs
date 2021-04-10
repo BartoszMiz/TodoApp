@@ -27,7 +27,7 @@ namespace TodoApp.Web.Pages
 
 		public async Task OnGetAsync()
         {
-			TodoItems = (await todoItemProvider.GetTodoItemsAsync()).ToArray();
+			TodoItems = (await todoItemProvider.GetTodoItemsAsync()).OrderBy(x=>x.Deadline).ToArray();
         }
     }
 }

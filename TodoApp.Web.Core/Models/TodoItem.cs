@@ -8,13 +8,11 @@ namespace TodoApp.Web.Core.Models
 	{
 		[Key]
 		public int Id { get; set; }
-		[Required]
 		public string Instruction { get; set; }
-		[JsonPropertyName("addition-date")] [Required]
+		[JsonPropertyName("addition-date")]
 		public DateTime AdditionDate { get; set; }
-		[Required]
 		public DateTime Deadline { get; set; }
-		[JsonPropertyName("is-completed")] [Required]
+		[JsonPropertyName("is-completed")]
 		public bool IsCompleted { get; set; }
 	}
 }

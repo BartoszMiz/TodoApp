@@ -28,6 +28,7 @@ namespace TodoApp.Web
 			services.AddSingleton<IDateTimeProvider, DefaultDateTimeProvider>();
 			services.AddSingleton<TodoItemDeadlineStateCalculator>();
 			services.AddScoped<ITodoItemProvider, TodoItemService>();
+			services.AddScoped<ITodoItemAdder, TodoItemService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
