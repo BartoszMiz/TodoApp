@@ -11,9 +11,14 @@
 	</div>
 	<div class="todo-form-row">
 		<label class="todo-form-label" for="deadline-date">Deadline:</label>
-		<input class="todo-form-field todo-form-date" id="deadline-date" type="date" asp-for="DeadlineDate" value="2021-04-01">
+		@{
+			var currentDate = Model.DateTimeProvider.Now;
+			var dateString = currentDate.ToString("yyyy-MM-dd");
+			var timeString = currentDate.ToString("HH:mm");
+		}
+		<input class="todo-form-field todo-form-date" id="deadline-date" type="date" asp-for="DeadlineDate" value="@dateString">
 		<label class="todo-form-label todo-form-at" for="deadline-time">@@</label>
-		<input class="todo-form-field todo-form-time" id="deadline-time" type="time" asp-for="DeadlineTime" value="12:00">
+		<input class="todo-form-field todo-form-time" id="deadline-time" type="time" asp-for="DeadlineTime" value="@timeString">
 
 		<div class="btn-divider" style="display: none; flex-basis: 100%;"></div>
 

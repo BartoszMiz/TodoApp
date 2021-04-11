@@ -13,6 +13,7 @@ namespace TodoApp.Web.Pages
     public class AddTodoModel : PageModel
     {
 		private readonly ITodoItemAdder itemService;
+		public readonly IDateTimeProvider DateTimeProvider;
 
 		[Required] [BindProperty]
 		public string Instruction { get; set; }
@@ -21,9 +22,10 @@ namespace TodoApp.Web.Pages
 		[Required] [BindProperty]
 		public string DeadlineTime { get; set; }
 
-		public AddTodoModel(ITodoItemAdder itemService)
+		public AddTodoModel(ITodoItemAdder itemService, IDateTimeProvider dateTimeProvider)
 		{
 			this.itemService = itemService;
+			this.DateTimeProvider = dateTimeProvider;
 		}
 
 		public void OnGet()
@@ -43,7 +45,7 @@ namespace TodoApp.Web.Pages
 				var todoItem = new TodoItem
 				{
 					Instruction = Instruction,
-					AdditionDate = DateTime.Now,
+					AdditionDate = DateTimeProvider.Now,
 					Deadline = deadline,
 					IsCompleted = false
 				};
