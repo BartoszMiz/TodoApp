@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace TodoApp.Web.Migrations
+namespace TodoApp.Web.Core.Migrations
 {
     public partial class Init : Migration
     {
@@ -13,7 +13,7 @@ namespace TodoApp.Web.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Instruction = table.Column<string>(type: "TEXT", nullable: false),
+                    Instruction = table.Column<string>(type: "TEXT", nullable: true),
                     AdditionDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Deadline = table.Column<DateTime>(type: "TEXT", nullable: false),
                     IsCompleted = table.Column<bool>(type: "INTEGER", nullable: false)

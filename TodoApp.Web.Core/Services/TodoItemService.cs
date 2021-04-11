@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace TodoApp.Web.Core.Services
 {
-	public class TodoItemService : ITodoItemProvider, ITodoItemAdder
+	public class TodoItemService : ITodoItemProvider, ITodoItemAdder, ITodoItemCompleter
 	{
 		private readonly TodoItemDbContext dbContext;
 
@@ -28,6 +28,17 @@ namespace TodoApp.Web.Core.Services
 		public async Task AddTodoItemAsync(TodoItem item)
 		{
 			await dbContext.TodoItems.AddAsync(item);
+			await dbContext.SaveChangesAsync();
+		}
+
+		public async Task CompleteTodoItemAsync(int id)
+		{
+			var item = await GetTodoItemAsync(id);
+			if(item?.IsCompleted != false)
+				return;
+
+			item.IsCompleted = true;
+			dbContext.Update(item);
 			await dbContext.SaveChangesAsync();
 		}
 	}

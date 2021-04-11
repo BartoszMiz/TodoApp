@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TodoApp.Web.Core.Contexts;
 
-namespace TodoApp.Web.Migrations
+namespace TodoApp.Web.Core.Migrations
 {
     [DbContext(typeof(TodoItemDbContext))]
     partial class TodoItemDbContextModelSnapshot : ModelSnapshot
@@ -29,7 +29,6 @@ namespace TodoApp.Web.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Instruction")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsCompleted")

@@ -1,4 +1,4 @@
-﻿@page
+@page
 @using TodoApp.Web.Core.Models
 @model IndexModel
 @{
@@ -36,7 +36,7 @@
 				<td>@todoItem.Deadline.ToString("dd.MM.yyyy @ HH:mm")</td>
 				<td>@todoItem.AdditionDate.ToString("dd.MM.yyyy @ HH:mm")</td>
 				<td>
-					<a class="todo-complete-icon">
+					<a class="todo-complete-icon" asp-page="/CompleteTask" asp-route-itemindex="@todoItem.Id">
 						<i class="fas fa-check"></i>
 					</a>
 				</td>

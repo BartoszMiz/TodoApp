@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TodoApp.Web.Core.Contexts;
 
-namespace TodoApp.Web.Migrations
+namespace TodoApp.Web.Core.Migrations
 {
     [DbContext(typeof(TodoItemDbContext))]
-    [Migration("20210408113022_Init")]
+    [Migration("20210411151718_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,7 +31,6 @@ namespace TodoApp.Web.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Instruction")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsCompleted")
