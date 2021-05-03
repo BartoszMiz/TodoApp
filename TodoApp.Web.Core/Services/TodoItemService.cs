@@ -8,9 +8,9 @@ namespace TodoApp.Web.Core.Services
 {
 	public class TodoItemService : ITodoItemProvider, ITodoItemAdder, ITodoItemCompleter
 	{
-		private readonly ITodoItemDbContext dbContext;
+		private readonly TodoItemDbContext dbContext;
 
-		public TodoItemService(ITodoItemDbContext dbContext)
+		public TodoItemService(TodoItemDbContext dbContext)
 		{
 			this.dbContext = dbContext;
 		}
@@ -34,7 +34,7 @@ namespace TodoApp.Web.Core.Services
 		public async Task CompleteTodoItemAsync(int id)
 		{
 			var item = await GetTodoItemAsync(id);
-			if(item?.IsCompleted != false)
+			if(item?.IsCompleted == true)
 				return;
 
 			item.IsCompleted = true;
