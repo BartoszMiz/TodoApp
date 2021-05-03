@@ -8,9 +8,9 @@ namespace TodoApp.Web.Core.Services
 {
 	public class TodoItemService : ITodoItemProvider, ITodoItemAdder, ITodoItemCompleter
 	{
-		private readonly TodoItemDbContext dbContext;
+		private readonly ITodoItemDbContext dbContext;
 
-		public TodoItemService(TodoItemDbContext dbContext)
+		public TodoItemService(ITodoItemDbContext dbContext)
 		{
 			this.dbContext = dbContext;
 		}
